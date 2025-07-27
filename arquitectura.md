@@ -5,59 +5,96 @@ graph TB
         B[📋 Assessment<br/>10 preguntas]
         C[📊 Dashboard]
         D[📈 Tracking]
+        E[⚙️ Settings<br/>Integraciones]
     end
     
     subgraph "API Gateway"
-        E[🔌 Express.js<br/>REST API]
+        F[🔌 Express.js<br/>REST API]
     end
     
     subgraph "Backend Services"
-        F[🧮 Age Calculator]
-        G[🤖 AI Service<br/>Claude 3]
-        H[📝 Plan Generator]
-        I[📊 Metrics Service]
+        G[🧮 Age Calculator]
+        H[🤖 AI Service<br/>Claude 3]
+        I[📝 Plan Generator]
+        J[📊 Metrics Service]
+        K[🔄 Sync Service<br/>Wearables]
     end
     
     subgraph "Database"
-        J[(🗄️ SQLite Dev<br/>PostgreSQL Prod)]
+        L[(🗄️ SQLite Dev<br/>PostgreSQL Prod)]
+    end
+    
+    subgraph "Wearables APIs"
+        M[⌚ Garmin Connect<br/>API]
+        N[🏃 Strava API]
+        O[💪 Apple Health]
+        P[💍 Oura Ring]
     end
     
     subgraph "External APIs"
-        K[🧠 Anthropic<br/>Claude API]
-        L[📧 SendGrid<br/>Email]
-        M[📈 Google<br/>Analytics]
+        Q[🧠 Anthropic<br/>Claude API]
+        R[📧 SendGrid<br/>Email]
+        S[📈 Google<br/>Analytics]
     end
     
+    subgraph "User Devices"
+        T[⌚ Garmin Fenix 7<br/>Musculación<br/>Montañismo<br/>MTB]
+        U[📱 Smartphone<br/>App Companion]
+    end
+    
+    T --> M
+    U --> M
+    
     A --> B
-    B --> E
-    C --> E
-    D --> E
-    
+    B --> F
+    C --> F
+    D --> F
     E --> F
-    E --> G
-    E --> H
-    E --> I
     
+    F --> G
+    F --> H
+    F --> I
     F --> J
-    G --> K
-    H --> J
-    I --> J
+    F --> K
     
-    G --> H
-    H --> L
-    C --> M
+    K --> M
+    K --> N
+    K --> O
+    K --> P
+    
+    M --> L
+    N --> L
+    O --> L
+    P --> L
+    
+    G --> L
+    H --> Q
+    I --> L
+    J --> L
+    
+    H --> I
+    I --> R
+    C --> S
     
     style A fill:#E8F5E9
     style B fill:#E8F5E9
     style C fill:#E8F5E9
     style D fill:#E8F5E9
-    style E fill:#FFF3E0
-    style F fill:#E3F2FD
+    style E fill:#E8F5E9
+    style F fill:#FFF3E0
     style G fill:#E3F2FD
     style H fill:#E3F2FD
     style I fill:#E3F2FD
-    style J fill:#FCE4EC
-    style K fill:#F3E5F5
-    style L fill:#F3E5F5
+    style J fill:#E3F2FD
+    style K fill:#E3F2FD
+    style L fill:#FCE4EC
     style M fill:#F3E5F5
+    style N fill:#F3E5F5
+    style O fill:#F3E5F5
+    style P fill:#F3E5F5
+    style Q fill:#F3E5F5
+    style R fill:#F3E5F5
+    style S fill:#F3E5F5
+    style T fill:#FFFDE7
+    style U fill:#FFFDE7
 ```
