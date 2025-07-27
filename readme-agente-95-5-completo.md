@@ -204,6 +204,9 @@ npm run dev
 - ❤️ Health Check: http://localhost:3001/api/health
 
 ## 🚀 Uso
+## 📁 Código de arquitectura
+
+- [Arquitectura Backend v2 (`NestJS`)](src/config/arquitectura-v2.ts)
 
 ### 1. Primera Evaluación
 
