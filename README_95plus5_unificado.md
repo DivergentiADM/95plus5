@@ -567,3 +567,23 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 <p align="center">
   <a href="#top">⬆️ Volver al inicio</a>
 </p>
+---
+
+## 🗂 Estructura del Proyecto (Monorepo)
+
+Este repositorio contiene dos partes bien separadas en una estructura de tipo monorepo:
+
+```
+95plus5/
+├── backend/       # Código fuente del backend (NestJS)
+│   └── src/
+│       └── ...servicios, controladores, módulos, etc.
+├── frontend/      # Aplicación frontend en Next.js 14 + Tailwind
+│   └── src/
+│       └── ...páginas, componentes y hooks
+├── README.md      # Este archivo, documentación principal del proyecto
+└── .gitignore     # Archivos ignorados por Git
+```
+
+- `backend/`: contiene el API desarrollado en NestJS para manejar lógica, datos y endpoints.
+- `frontend/`: contiene la interfaz de usuario con React (Next.js) para consumo del agente IA y visualización de métricas.
